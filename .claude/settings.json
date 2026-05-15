@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)", "Write(**)", "Edit(**)", "Glob(**)", "Grep(**)",
+      "Bash(npm *)", "Bash(npx *)",
+      "Bash(ls *)", "Bash(find *)", "Bash(cat *)", "Bash(mkdir *)"
+    ],
+    "deny": [
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(cat .env*)", "Bash(printenv*)",
+      "Bash(env |*)", "Bash(export -p*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Write|Edit",
+        "hooks": [{ "type": "command", "command": "bash /tmp/guardrail-scan.sh" }]
+      }
+    ]
+  }
+}

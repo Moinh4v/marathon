@@ -1,0 +1,8 @@
+{
+  "lint": "pass",
+  "tsc": "pass",
+  "build": "pass",
+  "summary": "Created a marathon training cycles landing page with a hero section, six-phase cycle grid (Base Building through Recovery), timeline bar, and CTA section using Tailwind CSS and Next.js 16 App Router conventions.",
+  "token_input": 8500,
+  "token_output": 2200
+}
